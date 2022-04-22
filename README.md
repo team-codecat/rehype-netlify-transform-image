@@ -1,9 +1,17 @@
 [![Build Status](https://secure.travis-ci.org/michaelnisi/rehype-resolution.svg)](http://travis-ci.org/michaelnisi/rehype-resolution)
 [![Coverage Status](https://coveralls.io/repos/github/michaelnisi/rehype-resolution/badge.svg?branch=master)](https://coveralls.io/github/michaelnisi/rehype-resolution?branch=master)
 
-# rehype-resolution
+# rehype-netlify-transform-image
 
-The **rehype-resolution** [Node.js](https://nodejs.com) package provides a [rehype](https://github.com/rehypejs/rehype) plugin for inserting `srcset` attributes into `img` elements. **rehype** is a [unified](https://unified.js.org) HTML processor.
+
+
+The **rehype-netlify-transform-image** [Node.js](https://nodejs.com) package provides a [rehype](https://github.com/rehypejs/rehype) plugin for inserting `srcset` attributes into `img` elements with a query string for [Netlify's image transform](https://docs.netlify.com/large-media/transform-images). **rehype** is a [unified](https://unified.js.org) HTML processor.
+
+Currently hard coded to provide images at 400, 600, 800, 1000, 1200, 1400px.
+
+Original docs below:
+
+Forked from [rehype-resolution](https://github.com/michaelnisi/rehype-resolution)
 
 The [srcset](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset) attribute of the `img` element enables [responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).  This plugin inserts a `srcset` for resolution switching, allowing different resolutions at the same size.
 
