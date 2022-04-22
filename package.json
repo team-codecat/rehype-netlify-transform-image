@@ -1,5 +1,5 @@
 {
-  "name": "rehype-netlify-tranform-image",
+  "name": "rehype-netlify-transform-image",
   "version": "1.0.0",
   "description": "Insert srcset attribute into img elements",
   "main": "index.js",
