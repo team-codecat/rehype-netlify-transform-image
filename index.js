@@ -15,15 +15,10 @@ function transform (tree) {
     if (tagName !== 'img' || typeof src !== 'string' || srcSet) return
 
     const { dir, ext, name } = path.parse(src)
-    const found = name.split('@')
-    const markers = ['1x', '2x', '3x']
+    const breakpoints = ['400', '600', '800', '1000', '1200', '1400']
 
-    if (found[1] !== markers[0]) return
-
-    const id = found[0]
-
-    node.properties.srcSet = markers.map(x => {
-      return path.join(dir, `${id}@${x}${ext} ${x}`)
+    node.properties.srcSet = breakpoints.map(breakpoint => {
+      return path.join(dir, `${name}${ext}?nf_resize=fit&w=${breakpoint} ${breakpoint}w`)
     })
   }
 
