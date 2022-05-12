@@ -15,6 +15,9 @@ function transform (tree) {
     if (tagName !== 'img' || typeof src !== 'string' || srcSet) return
 
     const { dir, ext, name } = path.parse(src)
+
+    if (dir.startsWith('http')) return;
+
     const breakpoints = ['400', '600', '800', '1000', '1200', '1400']
 
     node.properties.srcSet = breakpoints.map(breakpoint => {
